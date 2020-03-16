@@ -71,4 +71,9 @@ public class PaymentController {
         }
         return "超时测试";
     }
+
+    @GetMapping("zipkin")
+    public String zipkin() {
+        return "zipkin 测试";
+    }
 }
