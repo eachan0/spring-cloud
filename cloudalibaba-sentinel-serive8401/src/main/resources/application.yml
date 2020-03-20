@@ -1,0 +1,22 @@
+server:
+  port: 8401
+
+spring:
+  application:
+    name: sentinel-service
+  cloud:
+    nacos:
+      discovery:
+        server-addr: vm129.com:8848 #配置Nacos地址
+    sentinel:
+      transport:
+        dashboard: vm129.com:8080
+        port: 8719
+        client-ip: 192.168.59.1
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
+
