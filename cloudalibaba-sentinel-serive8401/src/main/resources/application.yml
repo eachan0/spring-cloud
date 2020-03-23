@@ -13,6 +13,14 @@ spring:
         dashboard: vm129.com:8080
         port: 8719
         client-ip: 192.168.59.1
+      datasource:
+        ds1:
+          nacos:
+            server-addr: vm129.com:8848
+            dataId: sentinel-service
+            groupId: DEFAULT_GROUP
+            data-type: json
+            rule-type: flow
 management:
   endpoints:
     web:

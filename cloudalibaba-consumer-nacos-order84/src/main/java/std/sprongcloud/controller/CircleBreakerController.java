@@ -44,13 +44,13 @@ public class CircleBreakerController {
     }
 
     //本例是fallback
-    public CommonResult handlerFallback(@PathVariable Long id, Throwable e) {
+    public CommonResult<Payment> handlerFallback(@PathVariable Long id, Throwable e) {
         Payment payment = new Payment(id, "null");
         return new CommonResult<>(444, "兜底异常handlerFallback,exception内容  " + e.getMessage(), payment);
     }
 
     //本例是blockHandler
-    public CommonResult blockHandler(@PathVariable Long id, BlockException blockException) {
+    public CommonResult<Payment> blockHandler(@PathVariable Long id, BlockException blockException) {
         Payment payment = new Payment(id, "null");
         return new CommonResult<>(445, "blockHandler-sentinel限流,无此流水: blockException  " + blockException.getMessage(), payment);
     }
