@@ -39,6 +39,9 @@
         <module>cloudalibaba-consumer-nacos-order84</module>
         <module>cloudalibaba-provider-payment9003</module>
         <module>cloudalibaba-provider-payment9004</module>
+        <module>seata-order-service2001</module>
+        <module>seata-storage-service2002</module>
+        <module>seata-account-service2003</module>
     </modules>
 
     <properties>
@@ -61,6 +64,8 @@
         <commons-collections4.version>4.4</commons-collections4.version>
         <lombok.version>1.18.12</lombok.version>
         <hutools.version>5.2.2</hutools.version>
+        <mybatis.version>2.1.2</mybatis.version>
+        <druid.version>1.1.21</druid.version>
     </properties>
 
     <dependencyManagement>
@@ -87,9 +92,19 @@
                 <scope>import</scope>
             </dependency>
             <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid-spring-boot-starter</artifactId>
+                <version>${druid.version}</version>
+            </dependency>
+            <dependency>
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>
                 <version>${lombok.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.mybatis.spring.boot</groupId>
+                <artifactId>mybatis-spring-boot-starter</artifactId>
+                <version>${mybatis.version}</version>
             </dependency>
             <dependency>
                 <groupId>cn.hutool</groupId>
