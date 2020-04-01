@@ -16,24 +16,24 @@ import javax.sql.DataSource;
 /**
  * @author zhuyc
  */
-@Configuration
+//@Configuration
 public class DataSourceProxyConfig {
 
     @Value("${mybatis.mapperLocations}")
     private String mapperLocations;
 
-    @Bean
-    @ConfigurationProperties(prefix = "spring.datasource")
+//    @Bean
+//    @ConfigurationProperties(prefix = "spring.datasource")
     public DataSource druidDataSource(){
         return new DruidDataSource();
     }
 
-    @Bean
+//    @Bean
     public DataSourceProxy dataSourceProxy(DataSource dataSource) {
         return new DataSourceProxy(dataSource);
     }
 
-    @Bean
+//    @Bean
     public SqlSessionFactory sqlSessionFactoryBean(DataSourceProxy dataSourceProxy) throws Exception {
         SqlSessionFactoryBean sqlSessionFactoryBean = new SqlSessionFactoryBean();
         sqlSessionFactoryBean.setDataSource(dataSourceProxy);

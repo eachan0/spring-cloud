@@ -29,4 +29,10 @@ logging:
 mybatis:
   mapperLocations: classpath:mapper/*.xml
 
-
+seata:
+  registry:
+    type: nacos
+    nacos:
+      server-addr: vm129.com:8848
+  config:
+    type: file

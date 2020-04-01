@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Configuration;
 /**
  * @author zhuyc
  */
-@Configuration
-@MapperScan({"std.springcloud.dao"})
+/*@Configuration
+@MapperScan({"std.springcloud.dao"})*/
 public class MyBatisConfig {
 }

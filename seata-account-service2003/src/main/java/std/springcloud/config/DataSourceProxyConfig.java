@@ -17,10 +17,10 @@ import javax.sql.DataSource;
 /**
  * @author zhuyc
  */
-@Configuration
+//@Configuration
 public class DataSourceProxyConfig {
 
-    @Value("${mybatis.mapperLocations}")
+    /*@Value("${mybatis.mapperLocations}")
     private String mapperLocations;
 
     @Bean
@@ -41,6 +41,6 @@ public class DataSourceProxyConfig {
         sqlSessionFactoryBean.setMapperLocations(new PathMatchingResourcePatternResolver().getResources(mapperLocations));
         sqlSessionFactoryBean.setTransactionFactory(new SpringManagedTransactionFactory());
         return sqlSessionFactoryBean.getObject();
-    }
+    }*/
 
 }
